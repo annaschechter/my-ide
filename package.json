@@ -1,0 +1,32 @@
+{
+  "name": "my-ide",
+  "version": "1.0.0",
+  "description": "Makers ide replicated using coffeescript",
+  "main": "app.coffee",
+  "scripts": {
+    "test": "mocha", "start": "node app.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/annaschechter/my-ide.git"
+  },
+  "author": "Anna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annaschechter/my-ide/issues"
+  },
+  "homepage": "https://github.com/annaschechter/my-ide",
+
+  "dependencies": {
+    "body-parser": "^1.9.2",
+    "ejs": "^1.0.0",
+    "express": "^4.10.1",
+    "express-ejs-layouts": "^1.1.0",
+    "socket.io": "^1.2.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.0.1",
+    "zombie": "^2.1.1"
+  }
+}
