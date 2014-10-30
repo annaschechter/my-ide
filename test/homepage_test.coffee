@@ -2,6 +2,7 @@ process.env.NODE_ENV = 'test'
 require('mocha')
 chai = require('chai')
 Browser = require('zombie')
+assert = require('assert')
 expect = chai.expect
 server = require('../app')
 fs = require('fs')
@@ -15,4 +16,7 @@ describe 'home page', ->
 		browser.visit '/'
 
 	it 'should show a welcome message', ->
-		expect(browser.text('h1')).to.equal('Welcome to Anna\'s app')
+		expect(browser.text('h1')).to.equal('Welcome to Anna\'s ide')
+
+	it 'can display my layout', ->
+		assert(browser.querySelector('.files'))

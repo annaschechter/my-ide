@@ -12,10 +12,7 @@ app.use(require('express').static('public'));
 app.set('view engine', 'ejs');
 
 app.get '/', (req, res) ->
-	res.send "<h1>Welcome to Anna's app</h1>"
-
-# app.listen (3000), ->
-# 	console.log "Listening on port 3000"
+	res.render "index"
 
 
 module.exports = server;
