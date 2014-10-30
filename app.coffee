@@ -12,7 +12,9 @@ app.use(require('express').static('public'));
 app.set('view engine', 'ejs');
 
 app.get '/', (req, res) ->
-	res.render "index"
+	fs.readdir 'code', (err, files) ->
+		console.log (files)
+		res.render "index", {files: files}
 
 
 module.exports = server;
