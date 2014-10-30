@@ -1,5 +1,7 @@
 
 <section class="files">
-	<a href="#">test_file.txt</a>
+	<% files.forEach(function(file) { %>
+		<a href="/edit?file=<%=file%>"><%=file%></a>
+	<% }) %>
 </section>
 

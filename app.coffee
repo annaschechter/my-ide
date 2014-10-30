@@ -13,8 +13,13 @@ app.set('view engine', 'ejs');
 
 app.get '/', (req, res) ->
 	fs.readdir 'code', (err, files) ->
-		console.log (files)
 		res.render "index", {files: files}
+
+
+app.get '/edit', (req, res) ->
+	fileName = req.query.file 
+	res.render('editor')
+
 
 
 module.exports = server;
